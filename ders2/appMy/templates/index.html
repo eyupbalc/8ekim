@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Document</title>
+</head>
+<body>
+
+  <h2>Ana sayfa</h2>
+  <img src="{% static 'img/mem.webp' %}" alt="uıgfyf">
+  <br><br><br>
+
+  {% for proje in projeler %}
+  {% if proje.title == 'otoo galeri'%}
+       <h3 style="color: blue;">{{ proje.title }}</h3>
+  {% else %}
+          <h3>{{proje.title}}</h3>     
+  {% endif %}
+     
+     <img src=" {{img/}}">
+     <h4>{{ proje.title }}</h4>
+     <p>{{ proje.detay }}</p>
+     <p>{{ proje.maliyet }}</p>
+     <p style="color: rgba(214, 196, 196, 0.8);">{{proje.projeuser  }}</p>
+  {% endfor %}
+</body>
+</html>
